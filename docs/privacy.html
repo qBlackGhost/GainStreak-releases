@@ -17,13 +17,14 @@
   </nav>
 
   <h1>Privacy policy</h1>
-  <p class="updated">Last updated 1 November 2026</p>
+  <p class="updated">Last updated 10 November 2026</p>
 
   <p>GainStreak is a gym tracker with a small social side: friends, a leaderboard and a map of the gyms your friends train at. It's a student project made by Cristi Delamarian, who is responsible for the data described here. Questions go to <a href="mailto:gainstreak.app@gmail.com">gainstreak.app@gmail.com</a>.</p>
 
   <div class="note">
     <p><strong>In short:</strong> your workouts, sets, body data and calories stay on your device and are never sent anywhere. The server only holds your account and what your friends see: your username, points, level, streak and, if you turn it on, the gyms you check in at.</p>
-    <p>No ads, no analytics, no tracking, and the app never reads your location.</p>
+    <p>On an iPhone you can connect Apple Health: what it reads from Health and what it saves there stays on the phone too.</p>
+    <p>No ads, no analytics and no tracking. On a phone the app uses your location to check that a workout is at one of your gyms and to notice when you're travelling; your location stays on the phone, except a rough position (about 1 km) when you ask for gyms near you on vacation.</p>
   </div>
 
   <h2>Kept only on your device</h2>
@@ -36,6 +37,31 @@
     <li>The app's error log, unless you choose to attach it to feedback</li>
   </ul>
   <p>Signing in on another device doesn't copy them: each device keeps its own. Uninstalling the app or deleting your account in it removes them from that device.</p>
+
+  <h2>Your location</h2>
+  <h3>During a workout</h3>
+  <p>On a phone, when you start a workout on Home, the app asks once for your location while you use it. It reads it at <strong>Start workout</strong> and after each set until it finds you near one of your gyms, then stops for that workout. That's all it's used for: marking the workout <strong>verified at gym</strong>, which earns it full points.</p>
+  <ul>
+    <li>It's read only while a workout is open on screen, never in the background, and the app doesn't have background location permission.</li>
+    <li>It's compared on the phone with the gyms already saved there (your cities' gyms and your own). Your position isn't stored, logged, or sent to the GainStreak server, OpenStreetMap or anyone else.</li>
+    <li>Only the result is kept on the phone: that the workout was verified, and at which gym.</li>
+    <li>You can say no, or turn it off later in the phone's settings. Workouts still count, with fewer points.</li>
+  </ul>
+  <h3>Noticing a trip</h3>
+  <p>When you open the app on a phone, at most every 6 hours, it reads your location once to see whether you're far from your home city (more than 40 km outside it), so it can ask whether you're on vacation. It only does this if you've already allowed location; it never asks for it for this. The position is compared on the phone with your home city's area and dropped. Only the time of the check is kept, and, if you answer "Not on vacation", that you said so.</p>
+
+  <h3>Gyms near you, on vacation</h3>
+  <p>When you tap <strong>Show me gyms near me</strong> on vacation, the app reads your location once and sends it, rounded to about 1 km, to OpenStreetMap's Nominatim to find out which city you're in. Only then, and only that rounded position. The city is kept on your phone as the city you're visiting until the vacation ends, and its gyms are loaded like any city's. If you'd rather not, search for the city by name instead.</p>
+  <p>The desktop app never reads your location.</p>
+
+  <h2>Apple Health (iPhone)</h2>
+  <p>Apple Health is off until you turn it on in Profile, and iOS then asks which data GainStreak may use. You can change that at any time in the iPhone's Settings, or turn it off in Profile.</p>
+  <ul>
+    <li><strong>Saved to Health:</strong> your finished workouts (when and for how long, and the day's name), your cardio sessions and the weigh-ins you log in the app.</li>
+    <li><strong>Read from Health:</strong> your weight (for example from a smart scale), height, birth date, sex and daily steps. Weigh-ins fill days you haven't logged; height, birth date and sex fill empty fields in your body data, and a different value is only suggested; your steps only suggest an activity level.</li>
+    <li>Health data stays on your phone. It isn't sent to the GainStreak server or anyone else, isn't used for ads or marketing, and doesn't earn points.</li>
+    <li>Turning it off stops reading and saving. What was already saved stays in Health, where you can delete it.</li>
+  </ul>
 
   <h2>Sent to the GainStreak server</h2>
   <p>The server runs on Google Cloud in Belgium, with its database at Neon in Frankfurt, both in the EU. Everything is sent over HTTPS.</p>
@@ -109,11 +135,11 @@
   </ul>
 
   <h2>Other services the app talks to</h2>
-  <p>The map, city search and gym list come from <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'s public servers: map tiles, Nominatim (city search) and the Overpass API (gyms in a city). They see your device's IP address and the area you're looking at, but nothing about your account. Their own privacy policy is at <a href="https://osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org</a>.</p>
+  <p>The map, city search and gym list come from <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'s public servers: map tiles, Nominatim (city search, and the city you're in when you ask for gyms near you on vacation) and the Overpass API (gyms in a city). They see your device's IP address and the area you're looking at, or the rounded position described above, but nothing about your account. Their own privacy policy is at <a href="https://osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org</a>.</p>
   <p>The companies that run the server for GainStreak, Google Cloud (hosting) and Neon (database), process the server data above on its behalf. Google also delivers the codes emailed to you for confirming your address and resetting your password. Discord receives the feedback and report notifications. None of them get it for their own use, and nothing is sold or shared for advertising.</p>
 
   <h2>What isn't collected</h2>
-  <p>Your location (the app never reads GPS: the map centres on the home city you pick), contacts, photos, files, health-platform data (Apple Health, Health Connect), advertising ids or device ids. There are no ads, no analytics and no tracking tools. Crashes aren't reported anywhere unless you send them yourself through Feedback.</p>
+  <p>Your location (it's used on the phone as described above, and the only position that leaves it is the rounded one sent to Nominatim when you ask for gyms near you; the GainStreak server never gets it), contacts, photos, files, health data (what the app reads from or saves to Apple Health stays on your phone; Health Connect isn't used), advertising ids or device ids. There are no ads, no analytics and no tracking tools. Crashes aren't reported anywhere unless you send them yourself through Feedback.</p>
 
   <h2>Your choices and rights</h2>
   <ul>
