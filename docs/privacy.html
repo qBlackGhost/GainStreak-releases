@@ -17,7 +17,7 @@
   </nav>
 
   <h1>Privacy policy</h1>
-  <p class="updated">Last updated 11 November 2026</p>
+  <p class="updated">Last updated 15 November 2026</p>
 
   <p>GainStreak is a gym tracker with a small social side: friends, a leaderboard and a map of the gyms your friends train at. It's a student project made by Cristi Delamarian, who is responsible for the data described here. Questions go to <a href="mailto:gainstreak.app@gmail.com">gainstreak.app@gmail.com</a>.</p>
 
@@ -105,6 +105,11 @@
           <td data-label="Who can see it">Anyone you show the code or send the link to. Opening the link without the app shows only the code and the app's store pages, never whose code it is. Reset it in Friends → Show my QR code, and the old one stops working</td>
         </tr>
         <tr>
+          <td data-label="What">A push token for each phone signed in with friend notifications on: a random address from Apple or Google that lets the server send that phone a notification. Only while friend notifications are on</td>
+          <td data-label="Why">Telling you when someone sends you a friend request, accepts yours, or adds you with your QR code</td>
+          <td data-label="Who can see it">Nobody. It's deleted when you turn friend notifications off, log out on that phone, or delete your account, and when Apple or Google say it no longer works</td>
+        </tr>
+        <tr>
           <td data-label="What">Splits and workouts you share with a friend (the exercises and sets in them)</td>
           <td data-label="Why">Sending a plan to a friend</td>
           <td data-label="Who can see it">The friend you sent it to</td>
@@ -134,21 +139,23 @@
     <li><strong>Your account</strong> and what hangs off it are kept until you delete the account.</li>
     <li><strong>Gym check-ins</strong> are deleted after 31 days. Friends only see the last 30.</li>
     <li><strong>Shared splits and workouts</strong> are removed once the friend adds or dismisses them, after 30 days, or when you're no longer friends.</li>
-    <li><strong>Sessions</strong> end when you log out, or after 90 days without use.</li>
+    <li><strong>Sessions</strong> end when you log out, or after 90 days without use. A phone's push token goes with its session.</li>
     <li><strong>Suspended accounts</strong> stay on the server, hidden from everyone, until the suspension is lifted or the account is deleted. You can ask for that by email.</li>
     <li><strong>Server logs</strong>, which include IP addresses, are kept by Google Cloud for up to 30 days.</li>
   </ul>
 
   <h2>Other services the app talks to</h2>
   <p>The map, city search and gym list come from <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'s public servers: map tiles, Nominatim (city search, and the city you're in when you ask for gyms near you on vacation) and the Overpass API (gyms in a city). They see your device's IP address and the area you're looking at, or the rounded position described above, but nothing about your account. Their own privacy policy is at <a href="https://osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org</a>.</p>
-  <p>The companies that run the server for GainStreak, Google Cloud (hosting) and Neon (database), process the server data above on its behalf. Google also delivers the codes emailed to you for confirming your address and resetting your password. Discord receives the feedback and report notifications. None of them get it for their own use, and nothing is sold or shared for advertising.</p>
+  <p>Friend notifications are delivered by Apple's push service on an iPhone and by Firebase Cloud Messaging (Google) on Android. They carry the notification itself, for example "Friend request: alex wants to be your friend.", to the phone's push token. That's your friend's username and what happened, nothing else about either of you. Nothing goes through them while friend notifications are off.</p>
+  <p>The companies that run the server for GainStreak, Google Cloud (hosting) and Neon (database), process the server data above on its behalf. Resend, an email delivery service, sends the codes emailed to you for confirming your address and resetting your password, from noreply@gainstreak.app; it gets your email address and the code. Discord receives the feedback and report notifications. None of them get it for their own use, and nothing is sold or shared for advertising.</p>
 
   <h2>What isn't collected</h2>
-  <p>Your location (it's used on the phone as described above, and the only position that leaves it is the rounded one sent to Nominatim when you ask for gyms near you; the GainStreak server never gets it), contacts, photos, files, health data (what the app reads from or saves to Apple Health stays on your phone; Health Connect isn't used), advertising ids or device ids. There are no ads, no analytics and no tracking tools. Crashes aren't reported anywhere unless you send them yourself through Feedback.</p>
+  <p>Your location (it's used on the phone as described above, and the only position that leaves it is the rounded one sent to Nominatim when you ask for gyms near you; the GainStreak server never gets it), contacts, photos, files, health data (what the app reads from or saves to Apple Health stays on your phone; Health Connect isn't used), advertising ids, or ids of the phone itself such as its serial number (the push token above is the only phone-specific value, and it only delivers friend notifications). There are no ads, no analytics and no tracking tools. Crashes aren't reported anywhere unless you send them yourself through Feedback.</p>
 
   <h2>Your choices and rights</h2>
   <ul>
     <li><strong>Check-ins</strong> are off until you turn on "Visible to friends", and you can turn it off again.</li>
+    <li><strong>Friend notifications</strong> are off until you turn them on in Profile → Notifications → Friend requests. If you already allowed GainStreak's notifications for Reminders, they're on from the start. Turn them off there, or in your phone's notification settings.</li>
     <li><strong>Your invite link</strong> can be reset any time in Friends → Show my QR code. Anyone who adds you with it can be removed or blocked like any other friend.</li>
     <li><strong>Change your email or password</strong> in Profile → Account.</li>
     <li><strong>Delete your account</strong> in the app, or by email if you can't. See <a href="delete-account.html">Delete your account</a>.</li>
